@@ -6,20 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500|Hanalei+Fill" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Home</title>
+    <title>FoodMap</title>
   </head>
   <body>
+   
+    <div class="splash w-100 h-100 d-flex bg-dark justify-content-center align-items-center">
+      <h1 class="food-map">FoodMap</h1>
+    </div>
 
+    <section class="container d-none">
+      <header class="foodmap-home mx-auto">
+        <div>
+          <h2>FoodMap</h2>
+        </div>
+      </header>
+
+      <div id="map" class="col-10 mx-auto mt-3 mb-3"></div>
+
+      <form class="col-10 px-auto mx-auto">
+        <h3 class="filter-tittle text-center">Restaurantes próximos de você</h3>
+        <div class="filter align-items-center justify-content-space-around">
+          <input class="browse" type="text" placeholder="Filtrar restaurantes">
+          <button class="filter">Filtrar</button>
+        </div>
+      </form>
+      
+
+      <!-- Inserir imagens -->
+      <div class="col-10 m-2">
+        <div class="d-flex flex-wrap justify-content-center w-100 restaurante-thumbnail"></div>
+      </div>
+    </section>
+    
 
 
     <!-- O script comentado é o do Google maps -->
     <!-- <script async defer  src="https://maps.googleapis.com/maps/api/js?key=<sua-chave-da-API>&callback=<sua-funcao-de-inicio>">
     </script> -->  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf6OfsRkTi3-cOwzcVelfZWzMhiBrdj90&callback=initMap"
+    async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"crossorigin="anonymous"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
+    
   </body>
 </html>
+
+
